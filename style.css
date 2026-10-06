@@ -1113,3 +1113,94 @@
     }
 
 }
+/* =========================================================
+   FINAL MOBILE HERO — IMAGE AS FULL BACKGROUND
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        position: relative !important;
+        width: 100% !important;
+        min-height: 650px !important;
+        height: 650px !important;
+        padding: 34px 20px 50px !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        overflow: hidden !important;
+        isolation: isolate !important;
+    }
+
+    .hero-photo {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        transform: none !important;
+        overflow: hidden !important;
+        z-index: 0 !important;
+    }
+
+    .hero-photo img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        object-fit: cover !important;
+        object-position: 58% center !important;
+    }
+
+    .hero::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(7, 28, 21, 0.97) 0%,
+                rgba(7, 28, 21, 0.88) 28%,
+                rgba(7, 28, 21, 0.62) 48%,
+                rgba(7, 28, 21, 0.30) 67%,
+                rgba(7, 28, 21, 0.42) 100%
+            ) !important;
+    }
+
+    .hero-content {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+    }
+
+    .hero h1 {
+        max-width: 330px !important;
+    }
+
+    .hero .btn,
+    .hero a,
+    .hero button {
+        position: relative !important;
+        z-index: 3 !important;
+    }
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .hero {
+        min-height: 620px !important;
+        height: 620px !important;
+        padding-left: 17px !important;
+        padding-right: 17px !important;
+    }
+
+    .hero-photo img {
+        object-position: 58% center !important;
+    }
+
+}
